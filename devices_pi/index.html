@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Pi-Naps_v0.2 - Blino Maker Boards Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Pi-Naps_v0.2";
+    var mkdocs_page_input_path = "devices_pi.md";
+    var mkdocs_page_url = "/devices_pi/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Blino Maker Boards Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Blino</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Devices</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Pi-Naps_v0.2</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#pi-naps_v02">Pi-Naps_v0.2</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#eeg-output-modes">EEG Output Modes</a></li>
+        
+            <li><a class="toctree-l4" href="#device-compatibility">Device Compatibility</a></li>
+        
+            <li><a class="toctree-l4" href="#form-factor">Form Factor</a></li>
+        
+            <li><a class="toctree-l4" href="#electrodes">Electrodes</a></li>
+        
+            <li><a class="toctree-l4" href="#battery">Battery</a></li>
+        
+            <li><a class="toctree-l4" href="#config">Config</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../devices_tee/">Tee-Naps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pi-naps/">Pi-Naps</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tee-Naps/">Tee-Naps</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../eeg/">EEG</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../electrodes/">Electrodes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Blino Maker Boards Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Devices &raquo;</li>
+        
+      
+    
+    <li>Pi-Naps_v0.2</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="pi-naps_v02">Pi-Naps_v0.2</h1>
+<p>Pi-Naps is a Raspberry Pi Shield which provides a single channel EEG signal using three electrodes, with one positioned on the forehead and two on an ear clip. </p>
+<p>This shield is designed to fit the form factor of the Raspberry Pi Zero, facilitating the creation of portable and highly configurable Brain Computer Interfaces. It should be noted however, that due to the performance limitations of the Raspberry Pi Zero, not all features work correctly when using a Pi Zero and so it is important to see the documentation concerning Raspberry Pi integrations. </p>
+<p><em>Note: We are working to provide solutions to these limitations and will be developing updates for Pi zero compatibility through 2019</em>. </p>
+<h3 id="eeg-output-modes">EEG Output Modes</h3>
+<p>Pi-Naps provides the ability to measure hardware accelerated FFT values (EEG Power spectrum) which shows the amount of energy in a given frequency range. These values are computed on the EEG sensor chip on board the Pi-Naps shield, meaning there is no need to spend processing power on performing these relatively costly computations. </p>
+<p>The EEG power spectrum is generally useful when starting to build BCI (Brain Computer Interfaces).</p>
+<p>Further, Pi-naps provides two values for measuring the <em>attention</em> and <em>meditation</em> values, based on <a href="http://neurosky.com/biosensors/eeg-sensor/algorithms/">Neurosky's</a> proprietary algorithms. We cover the meaning of these values in detail in the <a href="/eeg">EEG section</a>.</p>
+<p>There are currently 3 operating modes available for use with Pi-Naps:</p>
+<h4 id="mode_basic">MODE_BASIC</h4>
+<p>Basic mode provides the following data outputs:</p>
+<ul>
+<li>Signal quality</li>
+<li>Attention Value</li>
+<li>Meditation value</li>
+<li>EEG Power Values (Hardware accelerated FFT)</li>
+</ul>
+<h4 id="mode_eeg_raw">Mode_EEG_Raw</h4>
+<ul>
+<li>Signal quality</li>
+<li>Attention Value</li>
+<li>Meditation value</li>
+<li>EEG value</li>
+</ul>
+<h4 id="mode_fft">Mode_FFT</h4>
+<ul>
+<li>Signal quality</li>
+<li>Attention Value</li>
+<li>Meditation value</li>
+<li>EEG value</li>
+<li>EEG Power Values (Hardware accelerated FFT)</li>
+</ul>
+<h3 id="device-compatibility">Device Compatibility</h3>
+<h4 id="raspberry-pi-zero">Raspberry Pi zero</h4>
+<p>Currently, there are limitations for the <em>Raspberry Pi zero</em>, meaning it can only operate in the the basic mode (Mode_Basic). This is due to constraints of the  Pi zero's hardware buffer size, restricting the amount of data it can handle. The Pi zero remains useful for most portable applications, with the core functionality available. For most cases, it is better to utilise the EEG powers or the meditation/attention values as you can start to consider the properties of the Brain activity without having to do expensive processing.<br />
+<strong>Note: We are working on solutions to unlock all features on the pi zero as well in the future.</strong></p>
+<h3 id="form-factor">Form Factor</h3>
+<p>Pi-Naps features a through hole header maximising compatibility with your current projects.</p>
+<p>This header design also allows for a low profile fit on top of a male header when fitted to the Pi Zero, making it optimal for wearable projects. Further, it is easy to adapt to the form factor of your Pi project without having to solder headers. This helps avoid the need for awkward soldering tasks on the Pi-Naps shield between projects which can result in damage if not performed carefully.</p>
+<p>Pi-Naps allows for stacking with other shields using long headers. This stacking capability is further emphasised by allowing a switchable method for communication between Pi-Naps and the Raspberry Pi. Choose between UART or I2C to ensure that there are no pin collisions with other devices/projects.</p>
+<h3 id="electrodes">Electrodes</h3>
+<p>Electrodes can be attached with a number of options. Pi-Naps offers three main methods for attachment.
+On the top there are two female jack plugs (one TRS, one TS), allowing you to easily plug the electrodes in and start measuring.
+There are also pads to attach a Dupont connector or directly solder electrodes, exposed on the underside of the board.</p>
+<p>If custom electrodes are required, it should be noted that the ear reference channel requires shield, voltage ref and reference and the main signal electrode requires shield and signal. For DIY electrodes, a quality, shielded audio cable is typically the best option, providing the shielded, dual core cable that best suits Pi-Naps_v0.2 electrodes.
+Electrodes are covered in more detail in the section on <a href="../electrodes/">electrodes</a> and details on DIY electrodes can be found on the Blino <a href="https://blino.io/blog">Blog</a> or <a href="https://blino.io/forum">Forums</a>.</p>
+<h3 id="battery">Battery</h3>
+<p>In order to control interference and allow for portable integrations, Pi-Naps features built in battery management for Lithium Ion batteries. The micro USB port found on the shield handles charging the battery. There is an LED indicator to indicate the charging status. This light goes off to indicate a fully charged battery.</p>
+<p>The switch on the Pi-Naps disconnects the battery. In the on position, power is allowed to flow to both the Rasberry Pi and the Pi-Naps. When plugged in the battery will charge no matter what the position of the switch.</p>
+<p>If the battery is not being used, power directly to the Raspberry Pi as normal (which will then power Pi-Naps).</p>
+<p>With a battery attached, this shield will power the Raspberry Pi it is mounted to.</p>
+<p>Quality batteries with independent protection should be used with Pi-Naps, particularly when used for wearable applications. Note that battery life is dependent on a number of factors and is primarily limited by the need to power the Raspberry Pi. If long battery life are desirable, with a small battery, we would recommend the Tee-Naps shield for Teensy 3.2 or subscription to keep up with our future releases...</p>
+<h3 id="config">Config</h3>
+<p>Configuration of the Pi-Naps shield is carried out with a combination of software calls and solder pads, exposed on the underside of Pi-Naps.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../devices_tee/" class="btn btn-neutral float-right" title="Tee-Naps">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Blino"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../devices_tee/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

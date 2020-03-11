@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Tee-Naps - Blino Maker Boards Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tee-Naps";
+    var mkdocs_page_input_path = "tee-Naps.md";
+    var mkdocs_page_url = "/tee-Naps/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Blino Maker Boards Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Blino</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Devices</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../devices_pi/">Pi-Naps_v0.2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../devices_tee/">Tee-Naps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pi-naps/">Pi-Naps</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Tee-Naps</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#tee-naps">Tee-Naps</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#installation">Installation</a></li>
+        
+            <li><a class="toctree-l3" href="#library">Library</a></li>
+        
+            <li><a class="toctree-l3" href="#additional-notes">Additional Notes</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../eeg/">EEG</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../electrodes/">Electrodes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Blino Maker Boards Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Tee-Naps</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><center> <img alt="Blino Logo" src="../imgs/BlinoLogo.png" /> </center></p>
+<h1 id="tee-naps">Tee-Naps</h1>
+<h2 id="installation">Installation</h2>
+<h3 id="step-1-arduino-ide">Step 1 - Arduino IDE</h3>
+<p>Download + Install Arduino IDE</p>
+<p>Navigate to the the main download page at <a href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a></p>
+<p>Choose the supported version for your system. Once downloaded, run the installer.</p>
+<h3 id="step-2-teensy-toolchain">Step 2 - Teensy Toolchain</h3>
+<p>Download + Install Teensyduino, the Teensy toolchain.</p>
+<p>Go to <a href="https://www.pjrc.com/teensy/td_download.html">https://www.pjrc.com/teensy/td_download.html</a> and follow the link to relevant OS.</p>
+<p>Download and run the installer for Teensyduino. During the installation the 
+Arduino IDE directory must be identified.</p>
+<p>If the installation fails, listing supported Arduino versions. Make sure a supported Arduino version is identified - Teensyduino should work with the latest version of Arduino found.</p>
+<h3 id="step-3-teenaps-library">Step 3 - TeeNaps Library</h3>
+<p>Now the development environment for the Teensy is established, the TeeNaps library must be installed.</p>
+<h4 id="locate-libraries-directory">Locate libraries directory</h4>
+<p>Locate your system's Arduino "Libraries" directory. This will typically look something like:</p>
+<pre><code class="console">C:\Program Files (x86)\Arduino\libraries
+</code></pre>
+
+<p>If you are having trouble finding this, go to your Arduino application icon on the desktop. Right click, properties. Then note the path in the properties window.</p>
+<h4 id="install-the-teenaps-library">Install the TeeNaps library</h4>
+<p>Find the git repository here: <a href="https://bitbucket.org/synapsdev/teenaps">https://bitbucket.org/synapsdev/teenaps</a></p>
+<p>There are two ways of downloading the library. </p>
+<ol>
+<li>
+<p>Download the zipped folder, then extract its contents into the Arduino library directory from the last step. </p>
+</li>
+<li>
+<p>Navigate into Arduino library directory on the command line, then git clone the repository. This will download the repository into the current directory.</p>
+</li>
+</ol>
+<pre><code class="console">git clone https://bitbucket.org/synapsdev/teenaps.git
+</code></pre>
+
+<p>The advantage of this method is when the library is updated in the future, the git pull command can be used to update it.</p>
+<h4 id="additional-resources">Additional Resources</h4>
+<p>For further resources, take a look at relevant links:</p>
+<ul>
+<li>Arduino - <a href="https://www.arduino.cc">https://www.arduino.cc</a></li>
+<li>Teensyduino - <a href="https://www.pjrc.com/teensy">https://www.pjrc.com/teensy</a></li>
+<li>TeeNaps - <a href="https://bitbucket.org/synapsdev/teenaps">https://bitbucket.org/synapsdev/teenaps</a></li>
+</ul>
+<h2 id="library">Library</h2>
+<h3 id="useage">Useage</h3>
+<p>There are two main classes that cover all required functionality. The TeeNapsController is for controlling the TeeNaps hardware.
+The BlinoParser is used for parsing/processing the data retrieved from the EEG sensor on the TeeNaps into meaningful information.</p>
+<h4 id="teenapscontroller">TeeNapsController</h4>
+<p>Use the TeeNapsController to setup how the TeeNaps operates. This includes functions for powering the EEG sensor and on-board LED, retrieving data from the EEG sensor over UART and configuring the EEG sensor operating modes.</p>
+<p>The TeeNapsController is a static class. This means you do not have to create an object to work on. Instead, control of the TeeNaps can be made using calls to the static functions provided in the class.</p>
+<p>1.Include the installed TeeNaps.h:</p>
+<pre><code class="c">#include &lt;TeeNaps.h&gt;
+</code></pre>
+
+<p>This should provide all TeeNaps functionality provided you have installed the TeeNaps into the arduino libraries directory correctly.</p>
+<p>2.The controller must be powered and configured into an operating mode correctly:</p>
+<pre><code class="c">TeeNapsController::activateTGAT();
+</code></pre>
+
+<p>[Optional] Setup a serial connection over the USB UART interface to receive data from the Teensy to your computer - Useful for printing or logging:</p>
+<pre><code class="c">USBSERIAL.begin(TeeNapsController::BUADRATE_57_6K);
+</code></pre>
+
+<p>3.The TeeNaps EEG chip will operate in a default baudrate and mode, however this function can be used to set the desired mode:</p>
+<pre><code class="c">setMode(TeeNapsController::RAW_OUTPUT_57_6K);
+</code></pre>
+
+<p>4.Data from the EEG sensor can be detected using:</p>
+<pre><code class="c">if(TeeNapsController::isWaiting())
+{
+...
+}
+</code></pre>
+
+<p>And then when data is detected, it can be read using:</p>
+<pre><code class="c">char data = TeeNapsController::readTGAT();
+</code></pre>
+
+<h4 id="blinoparser">BlinoParser</h4>
+<p>Use the BlinoParser class to process bytes retrieved from the EEG sensor into meaningful information.</p>
+<p>There are two methods of working with the parsed information:</p>
+<h5 id="1-returning-packets">1. Returning Packets</h5>
+<p>The parseByte function returns the latest packet. It is advisable to check with a conditional that the packet has been updated before using it. This is advised as not every iteration a byte is parsed is new information updated in the packet.</p>
+<p>Check the object's "updated" member variable.</p>
+<pre><code class="c">ParsedPacket packet = parser.parseByte(data);
+</code></pre>
+
+<pre><code class="c">if(packet.updated)
+{
+    ...
+}
+</code></pre>
+
+<h5 id="2-callbacks">2. Callbacks</h5>
+<p>There are a set of callback functions which when defined are executed when the associated information is parsed. Define these to use the information as desired.</p>
+<pre><code class="c">void eegSignalCallback(EEG eeg)
+{
+    ...
+}
+</code></pre>
+
+<p>In the setup code block, set the callback function in the blinoParser object to function defined previously:</p>
+<pre><code class="c">parser.eegSignalCallback = &amp;eegSignalCallback;
+</code></pre>
+
+<p>Now when the parser processes a new set of eeg values, the callback previously defined will execute:</p>
+<pre><code class="c">if(TeeNapsController::isWaiting())
+</code></pre>
+
+<pre><code class="c">{
+</code></pre>
+
+<pre><code class="c">    int data = TeeNapsController::readTGAT();
+</code></pre>
+
+<pre><code class="c">    parser.parseByte(data);
+</code></pre>
+
+<pre><code class="c">}
+</code></pre>
+
+<h3 id="examples">Examples</h3>
+<h4 id="blinky">Blinky</h4>
+<p>This example demonstrates the use of the TeeNaps on board LED. An appropriate first example to run with the TeeNaps Teensy hat.</p>
+<h4 id="logging">Logging</h4>
+<p>This example demonstrates the use of enabling the logging of data recieved from the EEG sensor over the USB serial interface to a specified file.</p>
+<h4 id="returning-packets">Returning Packets</h4>
+<p>This example demonstrates the use of returned packets of processed EEG data from the parser. Uses a conditional if statement to detect when the packet has been updated with new values.</p>
+<h4 id="callbacks">Callbacks</h4>
+<p>This example demonstrates the use of defining callback functions which execute when certain data items are processed through the parser.</p>
+<h4 id="command-bytes">Command Bytes</h4>
+<p>This example demonstrates the use of command bytes sent to the EEG sensor over the UART to control what mode the sensor operates in.</p>
+<h3 id="library-explanation">Library Explanation</h3>
+<p>What follows is an explanation of the Python source code which is available for modification and extension.</p>
+<p>Much of what is detaild here is covered in the code comments, however there may be further details found here.</p>
+<h4 id="teenaps-controller-class">TeeNaps Controller Class</h4>
+<p>The TeeNaps static class is used to control the TeeNaps from the Teensy. This includes getting data, configuring sensor EEG mode.</p>
+<h5 id="constants">Constants</h5>
+<p><span style="color:blue">TGAT_POWER_PIN</span> - This is the GPIO pin used to control power to the EEG sensor.</p>
+<p><span style="color:blue">LED_POWER_PIN</span>  - This is the GPIO pin used to control the UART pin. Pull down to deactivate the UART line when finished with.</p>
+<p><span style="color:blue">USB_SERIAL</span> - Serial interface over the USB. Typically used to communicate with a computer the Teensy is connected to.</p>
+<p><span style="color:blue">TGAT_SERIAL</span> - Serial interface over one of the Teensy UART pins. Used to communicate with the EEG sensor.</p>
+<p><span style="color:blue">BAUDRATE.</span>(<span style="color:purple">BUADRATE_1_2K = 1200, BUADRATE_9_6K = 9600, BUADRATE_57_6K = 57600</span>) - Enum of different baudrate values,</p>
+<p><span style="color:blue">OUTPUT_MODE.</span>(<span style="color:purple">NORMAL_OUTPUT_1_2K, NORMAL_OUTPUT_9_6K, RAW_OUTPUT_57_6K, FFT_OUTPUT_57_6K</span>) - Enum of the different modes the EEG sensor can be set in. These are passed into the set mode function to configure the EEG sensor. </p>
+<h5 id="variables">Variables</h5>
+<p><span style="color:red">_interface</span> - Indicates which interface is being used to communicate with EEG sensor.</p>
+<p><span style="color:red">_UART</span> - The UART object created for control of UART interface.</p>
+<p><span style="color:red">_I2C</span> - The I2C object created for control of the SC16IS750 I2C chip.</p>
+<h5 id="functions">Functions</h5>
+<p><span style="color:blue">activateLED</span>(<span style="color:purple">self, selectedLED</span>) - Activate the desired LED using the LED constants.</p>
+<p><span style="color:blue">deactivateLED</span>(<span style="color:purple">self, selectedLED</span>) - Deactivate the desired LED using the LED constants.</p>
+<p><span style="color:blue">deactivateAllLED</span>(<span style="color:purple">self</span>) - Deactivate all LEDs currently active.</p>
+<p><span style="color:blue">activateTGAT</span>(<span style="color:purple">self</span>) - Power the EEG sensor on the PiNaps. It is important the EEG sensor is powered before receiving data and controlling the sensor.</p>
+<p><span style="color:blue">deactivateTGAT</span>(<span style="color:purple">self</span>) - Powers down the EEG sensor. Desirable if not in use for an extended time to save battery.</p>
+<p><span style="color:blue">setupUART</span>(<span style="color:purple">self</span>) - Sets up the UART interface for communication with the EEG sensor in the default operating mode, 57.6k baudrate with normal and raw wave data.</p>
+<p><span style="color:blue">deactivateUART</span>(<span style="color:purple">self</span>) - Unconfigures use of UART interface for communication with EEG sensor. Making available the alternative I2C interface.</p>
+<p><span style="color:blue">setupI2C</span>(<span style="color:purple">self</span>) - Sets up the I2C interface for communication with the EEG sensor in the default operating mode, 57.6k baudrate with normal and raw wave data.</p>
+<p><span style="color:blue">isWaiting</span>(<span style="color:purple">self</span>) - Returns boolean indicating if there is data waiting to be received from the EEG sensor.</p>
+<p><span style="color:blue">dataWaiting</span>(<span style="color:purple">self</span>) - Returns a number indicating the number of bytes waiting to be received from the EEG sensor.</p>
+<p><span style="color:blue">readTGAT</span>(<span style="color:purple">self</span>) - Returns the next byte waiting to be received from the EEG sensor.</p>
+<p><span style="color:blue">setMode</span>(<span style="color:purple">self, output_mode</span>) - Set the operating mode of the EEG sensor using output modes class.</p>
+<p><span style="color:blue">_decodeByte</span>(<span style="color:purple">self, byte</span>) - Private class used to decode bytes received over UART.</p>
+<h4 id="blino-parser-class">Blino Parser Class</h4>
+<p>The BlinoParser class is used to parse the data received from the EEG sensor which comes as a stream structured in a defined protocol. The parser then processes it to extract useful information.</p>
+<p>This works by inputting the constant stream of bytes being received from the EEG sensor as they come. The parser records it all and once enough parts are received to process some EEG information, it becomes available in the parser object.</p>
+<h5 id="constants_1">Constants</h5>
+<p><span style="color:blue">State.</span>(<span style="color:purple">PARSER_STATE_NULL, PARSER_STATE_SYNC, PARSER_STATE_SYNC_CHECK, PARSER_STATE_PAYLOAD_LENGTH, PARSER_STATE_PAYLOAD, PARSER_STATE_CHKSUM, PARSER_STATE_WAIT_HIGH, PARSER_STATE_WAIT_LOW, PARSER_SYNC_BYTE, PARSER_EXCODE_BYTE</span>) - Class of constants that identify the states the BlinoParser can be in. As bytes are received, the parser keeps track of what state it is in from what was last received.</p>
+<p><span style="color:blue">DataDefinitions.</span>(<span style="color:purple">PARSER_CODE_BATTERY, PARSER_CODE_POOR_QUALITY, PARSER_CODE_ATTENTION, PARSER_CODE_MEDITATION, PARSER_CODE_8BITRAW_SIGNAL, PARSER_CODE_RAW_MARKER, PARSER_CODE_RAW_SIGNAL, PARSER_CODE_EEG_POWERS, PARSER_CODE_ASIC_EEG_POWER_INT</span>) - Class of constants that identify the types of information the parser processes from the EEG sensor data.</p>
+<h5 id="variables_1">Variables</h5>
+<p><span style="color:blue">PacketStructure.</span>(<span style="color:purple">updated, code, battery, quality, attention, meditation, raw,</span> <span style="color:blue">EEG.</span>(<span style="color:purple">delta, theta, lAlpha, hAlpha, lBeta, hBeta, lGamma, mGamma</span>))
+- Class which defines the structure of the packets received from the EEG sensor. The parsed data can be stored in objects of this class to give structured values.</p>
+<p><span style="color:red">lastByte</span> = 0 - Keeps track of the previous byte for a future verion where the EEG sensor may provide more data and the protocol extended.</p>
+<p><span style="color:red">payloadLength</span> = 0 - The expected length of the payload being receieved. Read from a byte as part of the payload describing the length of the payload to come.</p>
+<p><span style="color:red">payloadBytesReceived</span> = 0 - The number of bytes receieved from the payload so far. Used to track how much of the payload receieved, so it can move to next state when it has reached the expected payload length.</p>
+<p><span style="color:red">dataPayload</span> - The payload bytes buffer. This is processed through the parsePayload function.</p>
+<p><span style="color:red">dataPayload</span> - The sum of all bytes retrieved. Used as part of the checksum calculation to check packet integrity.</p>
+<p><span style="color:red">dataPayload</span> - The checksum value expected. Compared to the calculated checksum at end.</p>
+<p><span style="color:red">logging</span> - A boolean value which indicates if debugging information should be printed to standard console.</p>
+<p><span style="color:red">[Data]Callback</span> - All callback functions which can be defined using setters. When the associated data is processed by the parser, the related callback function executes.</p>
+<h5 id="functions_1">Functions</h5>
+<p><span style="color:blue">activateLogging</span>(<span style="color:purple">int baudrate</span>) - Activates logging EEG information to USB serial interface. Therefore if serial stream monitored over it will see debug information. Sets logging = true.</p>
+<p><span style="color:blue">deactivateLogging</span>(<span style="color:purple"></span>) - Dectivates logging EEG information to USB serial interface. Sets logging = false.</p>
+<p><span style="color:blue">handleDataValue</span>(<span style="color:purple">unsigned char extendedCodeLevel, unsigned char code, unsigned char numBytes, unsigned char* value,</span>) - Identifies the code of the current byte. It then processes it according to the protocol and extracts EEG information.</p>
+<p><span style="color:blue">ParsedPacket parseByte</span>(<span style="color:purple">unsigned char byte</span>) - Depending on current state, processes received byte accordingly and transtions to new state if needed.</p>
+<p><span style="color:blue">int parsePacketPayload</span>(<span style="color:purple">unsigned char byte</span>) - When the payload buffer is filled, processes the payload contents into meaningful data the parser packet is updated with.</p>
+<p>[Getters for latest full packet and individual EEG information.]</p>
+<h2 id="additional-notes">Additional Notes</h2>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../eeg/" class="btn btn-neutral float-right" title="EEG">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../pi-naps/" class="btn btn-neutral" title="Pi-Naps"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../pi-naps/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../eeg/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

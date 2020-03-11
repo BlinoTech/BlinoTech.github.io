@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Electrodes - Blino Maker Boards Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Electrodes";
+    var mkdocs_page_input_path = "electrodes.md";
+    var mkdocs_page_url = "/electrodes/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Blino Maker Boards Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Blino</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Devices</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../devices_pi/">Pi-Naps_v0.2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../devices_tee/">Tee-Naps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pi-naps/">Pi-Naps</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tee-Naps/">Tee-Naps</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../eeg/">EEG</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Electrodes</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#electrodes-pi-naps_v02">Electrodes [ Pi-Naps_v0.2 ]</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#solder">Solder</a></li>
+        
+            <li><a class="toctree-l3" href="#dupont">Dupont</a></li>
+        
+            <li><a class="toctree-l3" href="#25mm-jack">2.5mm jack</a></li>
+        
+            <li><a class="toctree-l3" href="#electrode-wiring-pi-naps_v02">Electrode Wiring [ Pi-Naps_v0.2 ]</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Blino Maker Boards Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Electrodes</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="electrodes-pi-naps_v02">Electrodes [ Pi-Naps_v0.2 ]</h1>
+<p>There are three options available for connecting electrodes to Pi-Naps. </p>
+<ul>
+<li>Solder Pads</li>
+<li>Dupont</li>
+<li>2.5mm Jack</li>
+</ul>
+<h3 id="solder">Solder</h3>
+<p>You may solder your wire directly to the solder pads exposed on the underside of the board. This will give you a fixed attachment. You should bear in mind the effects of fatigue when using this setup and design a case (or some other setup) that fixs the electrode cable and takes any potential strain.</p>
+<h3 id="dupont">Dupont</h3>
+<p>Pi-Naps can be ordered with pins fitted to the board, allowing for compatability with dupont connectors. This can be useful for home made electrode applications and low cost testing. </p>
+<p>The solder pads on the underside of Pi-Naps match the footprint for SMT type right angle 2.54mm headers. These can easily be added and removed at the users convenience. </p>
+<h3 id="25mm-jack">2.5mm jack</h3>
+<p><em>Our 2.5mm Jack electrodes are expected to arrive on our store within the next month</em> </p>
+<p>The recommended method for attaching electrodes to Pi-Naps is using 2.5mm jacks. This is not currently a standard connector for EEG electrodes and as such we have had electrodes made especially for this application. </p>
+<p>So far we have found the performance of jack connectors to be effective in terms of noise and the obvious connvience is a excellent benefit for many applications. </p>
+<p>Jacks make it easy to transport, minimise fatigue on the connector and allow for easy changes between different cables.</p>
+<h2 id="electrode-wiring-pi-naps_v02">Electrode Wiring [ Pi-Naps_v0.2 ]</h2>
+<p>Electrodes used with Pi-Naps (and Tee-Naps) are split into two wires typically. The Forehead electrode requires a single core cable which is shielded. The Ear Reference requires a two core cable, that is shielded. </p>
+<p>It is likely easiest to use twin core, shielded wire and only use one core for the forehead electrode. </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../eeg/" class="btn btn-neutral" title="EEG"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../eeg/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

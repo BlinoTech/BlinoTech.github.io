@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Pi-Naps - Blino Maker Boards Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Pi-Naps";
+    var mkdocs_page_input_path = "pi-naps.md";
+    var mkdocs_page_url = "/pi-naps/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Blino Maker Boards Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Blino</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Devices</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../devices_pi/">Pi-Naps_v0.2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../devices_tee/">Tee-Naps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Pi-Naps</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#quick-start">Quick Start</a></li>
+    
+
+    <li class="toctree-l2"><a href="#installation">Installation</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#installing-i2c-driver">Installing I2C Driver</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#raspberry-pi-compatibility">Raspberry Pi Compatibility</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#pi-zero">Pi Zero</a></li>
+        
+            <li><a class="toctree-l3" href="#pi-3b">Pi 3b</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#library">Library</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#usage">Usage</a></li>
+        
+            <li><a class="toctree-l3" href="#pinapscontroller">PiNapsController</a></li>
+        
+            <li><a class="toctree-l3" href="#blinoparser">BlinoParser</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#troubleshooting">Troubleshooting</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tee-Naps/">Tee-Naps</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../eeg/">EEG</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../electrodes/">Electrodes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Blino Maker Boards Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Pi-Naps</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><center> <img alt="Blino Logo" src="../imgs/BlinoLogo_Simple.svg" /> </center></p>
+<h2 id="quick-start">Quick Start</h2>
+<pre><code class="console">pip install pinaps
+pip install SC16IS750
+
+sudo raspi-config
+</code></pre>
+
+<blockquote>
+<ul>
+<li><em>Select <strong>interfacing options</strong> from menu.</em></li>
+<li><em>Select <strong>serial</strong> from menu.</em></li>
+<li><em>Select <strong>no</strong> to shell use over serial</em>.</li>
+<li><em>Select <strong>yes</strong> to enabling serial port hardware</em>.</li>
+</ul>
+</blockquote>
+<pre><code class="console">sudo raspi-config
+</code></pre>
+
+<blockquote>
+<ul>
+<li>
+<p><em>Select <strong>interfacing options</strong> from menu.</em></p>
+</li>
+<li>
+<p><em>Select <strong>I2C</strong> from menu.</em></p>
+</li>
+<li>
+<p><em>Select <strong>yes</strong> to enable ARM I2C interface.</em></p>
+</li>
+</ul>
+</blockquote>
+<p>Clone our examples repository somewhere appropriate:</p>
+<pre><code class="console">git clone https://Blino_Tech@bitbucket.org/blino-dev/pinaps.git
+</code></pre>
+
+<p>Run an example script - don't forget to plug your electrodes in!</p>
+<pre><code class="console">cd pi-naps_examples/
+
+python meditate.py
+</code></pre>
+
+<h2 id="installation">Installation</h2>
+<p>The installation of the Pi-Naps library should be as simple as using pip to install the online distribution. From then onwards you can import it into your scripts and use the library classes (See <a href="#usage">Usage</a>)</p>
+<pre><code class="console">pip install pinaps
+</code></pre>
+
+<p>Alternatively, the original repository can be cloned into a directory and used locally from there:</p>
+<pre><code class="console">git clone https://Blino_Tech@bitbucket.org/blino-dev/pinaps.git
+</code></pre>
+
+<p>This is the best way of running the examples straight away and testing the library out.</p>
+<h3 id="installing-i2c-driver">Installing I2C Driver</h3>
+<p>The Pi-Naps uses an I2C chip as an interface to communicate with the EEG sensor and for configuring some pinouts on the board. This requires a standalone driver which may need installing separately.</p>
+<p>If you need to install the I2C driver separately required to use the Pi-Naps:</p>
+<pre><code class="console">pip install SC16IS750
+</code></pre>
+
+<p>Alternatively, the original repository can be cloned into the Pi-Naps repository:</p>
+<pre><code class="console">git clone https://github.com/Harri-Renney/SC16IS750-Python-Driver.git
+</code></pre>
+
+<p>(See <a href="https://github.com/Harri-Renney/SC16IS750-Python-Driver">https://github.com/Harri-Renney/SC16IS750-Python-Driver</a>)</p>
+<h4 id="serial-port-configuration">Serial Port Configuration</h4>
+<p>In order for you to use the serial interface on your Raspberry Pi Zero, you may need to configure the OS to enable its use.</p>
+<p>1.Run <code>raspi-config</code> from command line.</p>
+<pre><code class="console">sudo raspi-config
+</code></pre>
+
+<p>2.Select interfacing options from menu.</p>
+<p><img alt="Serial Step 1" src="../imgs/SerialStep1.png" /></p>
+<p>3.Select serial from menu.</p>
+<p><img alt="Serial Step 2" src="../imgs/SerialStep2.png" /></p>
+<p>4.Select no to shell use over serial.</p>
+<p><img alt="Serial Step 3" src="../imgs/SerialStep3.png" /></p>
+<p>5.Select yes to enabling serial port hardware.</p>
+<p><img alt="Serial Step 4" src="../imgs/SerialStep4.png" /></p>
+<h4 id="i2c-configuration">I2C Configuration</h4>
+<p>In order for you to use the I2C interface on your Raspberry Pi Zero, you may need to configure the OS to enable its use.</p>
+<p>1.Run raspi-config from command line.</p>
+<pre><code class="console">sudo raspi-config
+</code></pre>
+
+<p>2.Select interfacing options from menu.</p>
+<!-- ![Serial Step 1](NEED I2C PIC) -->
+
+<p>3.Select I2C from menu.</p>
+<!-- ![Serial Step 2](NEED I2C PIC) -->
+
+<p>4.Select yes to enable ARM I2C interface.</p>
+<!-- ![Serial Step 3](NEED I2C PIC)/ -->
+
+<!-- Might need to install smbus? pip install smbus2 - Need double check -->
+
+<h2 id="raspberry-pi-compatibility">Raspberry Pi Compatibility</h2>
+<h3 id="pi-zero">Pi Zero</h3>
+<p>This shield is designed to fit the form factor of the Raspberry Pi Zero, facilitating the creation of portable and highly configurable Brain Computer Interfaces. It should be noted however, that due to the performance limitations of the Raspberry Pi Zero, not all features work correctly when using a Pi Zero and so it is important to see the documentation concerning Raspberry Pi integrations. </p>
+<p>Current limitations are:</p>
+<ul>
+<li>Restricted to "<a href="../devices_pi/# EEG Output Modes">Basic_Mode</a>" output mode</li>
+</ul>
+<p><em>Note: We are working to provide solutions to these limitations and will be developing updates for Pi zero compatability through 2019</em>. </p>
+<h3 id="pi-3b">Pi 3b</h3>
+<p>Using the Pi 3b currently facilitates access to the full potential of the Pi-Naps_v0.2 providing the option to record RAW EEG and FFT simultaneously.</p>
+<h2 id="library">Library</h2>
+<h3 id="usage">Usage</h3>
+<p>There are two main classes that cover all required functionality. The Pi-NapsController is for controlling the Pi-Naps hardware. The BlinoParser is used for parsing the data retrieved from the EEG sensor into the values that Pi-Naps can produce.</p>
+<h3 id="pinapscontroller">PiNapsController</h3>
+<p>The Pi-NapsController allows for control over the Pi-Naps shield, allowing access to LED and Button (<em>Button: supported coming soon</em>) as well as device configuration. The EEG Sensor is read from the Controller and data should be passed into the BlinoParser to parse into useful information.</p>
+<p>The controller can also configure what pins EEG data is transferred over, allowing for configuration of your project in software.</p>
+<p>It's important to import the PiNapsController with the form <code>from pinaps.piNapsController import PiNapsController</code> to ensure correct operation.</p>
+<p>Below is a script demonstrating typical a typical setup and use of PiNapsController</p>
+<pre><code class="python">from pinaps.piNapsController import PiNapsController
+# First the controller is initalized and setup with desired control
+
+# Create a PiNapsController object:
+controller = PiNapsController()
+
+# Select how Pi-Naps is controlled : options are using I2C or UART. 
+# If you are unsure we recommend I2C for maximising compatability and functionality.
+controller.setControlInterfaceI2C()
+
+# Setup the use of I2C interface in communication with EEG sensor chip:
+controller.setEEGSensorInterfaceI2C()
+
+# Set the desired mode for the EEG chip to operate in.
+
+#For Raspberry Pi Zero: 
+# ONlY BASIC MODE IS CURRENTLY SUPPORTED
+controller.setModeBasic()
+
+#Raspberry Pi 3 etc have full access....
+# controller.setModeEEGRaw()
+# controller.setModeFFT()
+
+
+# From this point, any available EEG data from the board when ready can be detected using:
+while(1):
+    if(controller.dataWaiting() &gt; 0):
+        data = controller.readEEGSensor()
+        #We then parse data to the parser to make more sense of it!
+        parser.parseByte(data)
+
+</code></pre>
+
+<p><strong>We may consider these modes in more detail:</strong></p>
+<h4 id="control-interface">Control Interface</h4>
+<p>The control interface is the setting describing how the Raspberry Pi and Pi-Naps shield should comunicate. You may control the shield using the I2C bus (which is recomended for full featured operation), or using the GPIO pins.</p>
+<p>In general, we recommend using the I2C setting and would only change this, if we had a specific reason to completely reserve the I2C bus.</p>
+<pre><code class="python"># Functions for configuration of Controlling Pi-Naps 
+
+from pinaps.piNapsController import PiNapsController
+
+controller = PinapsController()
+
+# We have two main ways to set the control method
+
+# Using a parameter
+controller.setControlInterface(controller.Control.I2C)
+controller.setControlInterface(controller.Control.GPIO)
+# Etc ...
+
+# Or with a direct function call for more convenience
+
+controller.setControlInterfaceI2C()
+controller.setControlInterfaceGPIO()
+# Etc ...
+</code></pre>
+
+<h4 id="eeg-sensor-interface">EEG Sensor Interface</h4>
+<p>The EEG sensor interface allows you to set the pins over which the EEG data itself is transfered. Again we recomend I2C for this, however this can also be set to use UART. Again, this is done to allow for avoiding collisions with other projects or devices.</p>
+<pre><code class="python"># Functions for configuration of setting Pi-Naps EEG sensor communication channel
+
+from pinaps.piNapsController import PiNapsController
+
+controller = PinapsController()
+
+# We have two main ways to set the control method
+
+# Using a parameter
+controller.setEEGSensorInterface(controller.Interface.I2C)
+controller.setEEGSensorInterface(controller.Interface.UART)
+
+# Etc ...
+
+# Or with a direct function call for more convenience
+controller.setEEGSensorInterfaceI2C()
+controller.setEEGSensorInterfaceUART()
+# Etc ...
+</code></pre>
+
+<h4 id="pi-naps-mode-data-output-mode">Pi-Naps Mode (Data Output Mode)</h4>
+<p>The 'Mode'  configures what data the EEG sensor produces. </p>
+<p><em>Notably: The Rasberry Pi Zero can currently only operate in Basic Mode.</em></p>
+<p><strong>The Modes are as follows:</strong></p>
+<p><code>setBasicMode()</code></p>
+<p>Basic mode provides the following data points:
+- Signal Quality
+- Meditation Value
+- Attention Value
+- EEG powers ( FFT )</p>
+<p>​<code>setRawEEGMode()</code></p>
+<p>Raw EEG mode provides the following data points:</p>
+<ul>
+<li>Signal Quality</li>
+<li>Meditation Value</li>
+<li>Attention Value</li>
+<li>Raw EEG Signal</li>
+</ul>
+<p><code>setFFTMode()</code></p>
+<p>FFT mode provides the following data points:</p>
+<ul>
+<li>Signal Quality</li>
+<li>Meditation Value</li>
+<li>Attention Value</li>
+<li>Raw EEG Signal</li>
+<li>EEG powers ( FFT )
+​</li>
+</ul>
+<h3 id="blinoparser">BlinoParser</h3>
+<p>The Blino parser, transaltes the stream of bytes from the Pi-Naps into meaningful more information.
+It's important to import the BlinoParser correctly. Just use the following code at the beginning of your script if you are unsure.</p>
+<pre><code class="python">from pinaps.blinoParser import BlinoParser
+</code></pre>
+
+<p>There are two methods for working with the parsed information:</p>
+<h4 id="1-callbacks">1. Callbacks</h4>
+<p>The prefered method for handling data is to use callbacks. We simply create a function to work with the relevant data and then register that function for use with </p>
+<p>Here a function is defined, simply to print the attention value:</p>
+<pre><code class="python">def onAttentionRecieved(attention):
+    print(&quot;Attention value: %d&quot; % attention)
+...
+</code></pre>
+
+<p>Now when a parser is created, and processes a new attention value a callback is triggered. If we register the previously defined callback, it will execute on every new value recieved. </p>
+<p>We may register the function as follows:</p>
+<pre><code class="python">#Create parser.
+parser = BlinoParser()  
+#Register the attentionCallback function with the parser.
+parser.attentionCallback = onAttentionRecieved 
+</code></pre>
+
+<h4 id="2-returning-packets">2. Returning Packets</h4>
+<p>The parseByte function returns the latest packet. It is advisable to check with a conditional that the packet has been updated before using it. This is advised as not every iteration a byte is parsed is new information updated in the packet. Check the object's "updated" member variable.</p>
+<pre><code class="python">returnedPacket = parser.parseByte(data)
+
+if(returnedPacket.updated):
+    print(&quot;Delta Value = %d&quot; % returnedPacket.EEGPower.delta)
+</code></pre>
+
+<p>Alternatively, the latest packet can be retrieved from the parsedPacket:</p>
+<pre><code class="python">currentPacket = parser.parsedPacket
+print(&quot;meditation value = %d&quot; % currentPacket.meditation)
+</code></pre>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Pip Install</strong></p>
+<p>If you're having trouble using pip install. Try using:</p>
+<pre><code class="python">python -m pip install --index-url https://pypi.org/simple/ example_pkg
+</code></pre>
+
+<p>Where the url is the project url and the example_pkg is the package you wish to install.</p>
+<p><strong>Python Library Path</strong></p>
+<p>You might be having a lot of trouble finding where to install the libraries manually for global use. On raspbian it should look something like this:
+"usr/local/lib/python2.7/dist-packages"</p>
+<p>A lot of unnecessary trouble can come of this, especially if you are not confident in using linux and more specifically Raspbian. In which case, we advise to just clone the repository into a local directory and create your script in there, with the library files in the same directory.</p>
+<p>___Additional Dependencies Error__</p>
+<p>During pip install of Pi-Naps. If an error occours specifically around installing any addtional dependencies. Use <code>--no-dependencies</code> flag.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tee-Naps/" class="btn btn-neutral float-right" title="Tee-Naps">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../devices_tee/" class="btn btn-neutral" title="Tee-Naps"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../devices_tee/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tee-Naps/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

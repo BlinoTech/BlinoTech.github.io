@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>EEG - Blino Maker Boards Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "EEG";
+    var mkdocs_page_input_path = "eeg.md";
+    var mkdocs_page_url = "/eeg/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Blino Maker Boards Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Blino</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Devices</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../devices_pi/">Pi-Naps_v0.2</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../devices_tee/">Tee-Naps</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../pi-naps/">Pi-Naps</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../tee-Naps/">Tee-Naps</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">EEG</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#eeg">EEG</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#attention">Attention</a></li>
+        
+            <li><a class="toctree-l3" href="#meditation">Meditation</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#eeg-power-values">EEG Power Values</a></li>
+    
+
+    <li class="toctree-l2"><a href="#eeg-value">EEG value</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#signal-quality">Signal Quality</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../electrodes/">Electrodes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Blino Maker Boards Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>EEG</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="eeg">EEG</h1>
+<p>The values produced by the first generation Blino 'Maker boards' (Pi-Naps_v0.2 and Tee-Naps_v0.2) are outlined in this section. </p>
+<h2 id="attention">Attention</h2>
+<p>The attention value represents the intensity of the current mental 'focus' or 'attention'. </p>
+<p>The attention level increases when the subject is focused on single task or object within the range 0-100. </p>
+<p>These values are executed in hardware on the EEG sensor mounted to Pi-Naps_v0.2. The algorithm is implemented by Neurosky and the concept for deriving these values is outlined in their white paper : <a href="http://neurosky.com/wp-content/uploads/2016/06/Control-vs-Monitor.pdf">"BCI: Entertainment's Brain Hacking Tool for Control and Monitoring"</a>.</p>
+<h2 id="meditation">Meditation</h2>
+<p>The attention value represents the intensity of the current mental 'calmness' or 'relaxation'. </p>
+<p>The attention level increases when the subject relax their mind and decreases when 'uneasy' or 'stressed' within the range 0-100. </p>
+<p>These values are executed in hardware on the EEG sensor mounted to Pi-Naps_v0.2. The algorithm is implemented by Neurosky and the concept for deriving these values is outlined in their white paper : <a href="http://neurosky.com/wp-content/uploads/2016/06/Control-vs-Monitor.pdf">"BCI: Entertainment's Brain Hacking Tool for Control and Monitoring"</a>.</p>
+<h1 id="eeg-power-values">EEG Power Values</h1>
+<p>The EEG Power values are hardware accelerated FFT meaning you do not pay the cost of performing the calculations involved in a fast Fourier transform, freeing up processing power for your application and getting useful information faster. </p>
+<p>The values produced by this transform represent the relative power within the frequency range (indicated in the table below). 
+This can be used to infer certain properties about brain activity however, this is the challenge we leave to you, as we do not yet have resources on this topic. </p>
+<p>The values produced here do not represent any real world units - in order to analyse and use these values they must be evaluated in a relative manner, considering temporal changes and comparing quantities only to itself(ie. number output from the current transform). The values will change (potentially by orders of magnitude) depending on a number of environmental factors, the person wearing the electrodes and the connection quality.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Frequency Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delta</td>
+<td>0.5 - 2.75Hz</td>
+</tr>
+<tr>
+<td>Theta</td>
+<td>3.5 - 6.75Hz</td>
+</tr>
+<tr>
+<td>Low-Alpha</td>
+<td>7.5 - 9.25Hz</td>
+</tr>
+<tr>
+<td>High-Alpha</td>
+<td>10 - 11.75Hz</td>
+</tr>
+<tr>
+<td>Low-Beta</td>
+<td>13 - 16.75Hz</td>
+</tr>
+<tr>
+<td>High-Beta</td>
+<td>18 - 29.75Hz</td>
+</tr>
+<tr>
+<td>Low-Gamma</td>
+<td>31 - 39.75Hz</td>
+</tr>
+<tr>
+<td>Mid-Gamma</td>
+<td>41 - 49.75Hz</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>These values are represented by Integers that represent up to 24 bits worth of values. </p>
+</blockquote>
+<p>Remember: These values represent the amount of power within the respective frequency band.
+<em>A simple exercise: Start by seeing if you can equate closing your eyes to an increase in alpha activity by recording and plotting a session</em></p>
+<h1 id="eeg-value">EEG value</h1>
+<p>These values consist of raw EEG represented by 16bit signed integer values. They are output 512 times per second (approx. every 2ms).</p>
+<p>Due to the noise floor of the signal, it should be noted that only the 12 most significant bits are relevant for processing this signal. As such you will only see values that fit this range and not the full range of 16bit integers. </p>
+<h2 id="signal-quality">Signal Quality</h2>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../electrodes/" class="btn btn-neutral float-right" title="Electrodes">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../tee-Naps/" class="btn btn-neutral" title="Tee-Naps"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../tee-Naps/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../electrodes/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
