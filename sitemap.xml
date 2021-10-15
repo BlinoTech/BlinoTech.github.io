@@ -1,38 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>http://www.BlinoMakerBoards.com/</loc>
-     <lastmod>2020-03-11</lastmod>
-     <changefreq>daily</changefreq>
+        <loc>bhttps://blino.io/</loc>
     </url>
     <url>
-     <loc>http://www.BlinoMakerBoards.com/devices_pi/</loc>
-     <lastmod>2020-03-11</lastmod>
-     <changefreq>daily</changefreq>
+        <loc>bhttps://blino.io/blog/</loc>
     </url>
     <url>
-     <loc>http://www.BlinoMakerBoards.com/devices_tee/</loc>
-     <lastmod>2020-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://www.BlinoMakerBoards.com/pi-naps/</loc>
-     <lastmod>2020-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://www.BlinoMakerBoards.com/tee-Naps/</loc>
-     <lastmod>2020-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://www.BlinoMakerBoards.com/eeg/</loc>
-     <lastmod>2020-03-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>http://www.BlinoMakerBoards.com/electrodes/</loc>
-     <lastmod>2020-03-11</lastmod>
-     <changefreq>daily</changefreq>
+        <loc>bhttps://blino.io/docs/</loc>
     </url>
 </urlset>

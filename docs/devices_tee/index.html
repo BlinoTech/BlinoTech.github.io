@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Electrodes - Blino Maker Boards Documentation</title>
+  <title>Tee-Naps - Blino 'Maker' Boards Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Electrodes";
-    var mkdocs_page_input_path = "electrodes.md";
-    var mkdocs_page_url = "/electrodes/";
+    var mkdocs_page_name = "Tee-Naps";
+    var mkdocs_page_input_path = "devices_tee.md";
+    var mkdocs_page_url = "/devices_tee/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Blino Maker Boards Documentation</a>
+        <a href=".." class="icon icon-home"> Blino 'Maker' Boards Documentation</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -61,9 +61,15 @@
                     
     <a class="" href="../devices_pi/">Pi-Naps_v0.2</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../devices_tee/">Tee-Naps</a>
+    <a class="current" href="./">Tee-Naps</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#tee-naps">Tee-Naps</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -83,27 +89,9 @@
     <a class="" href="../eeg/">EEG</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Electrodes</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#electrodes-pi-naps_v02">Electrodes [ Pi-Naps_v0.2 ]</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#solder">Solder</a></li>
-        
-            <li><a class="toctree-l3" href="#dupont">Dupont</a></li>
-        
-            <li><a class="toctree-l3" href="#25mm-jack">2.5mm jack</a></li>
-        
-            <li><a class="toctree-l3" href="#electrode-wiring-pi-naps_v02">Electrode Wiring [ Pi-Naps_v0.2 ]</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../electrodes/">Electrodes</a>
 	    </li>
           
         </ul>
@@ -116,7 +104,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Blino Maker Boards Documentation</a>
+        <a href="..">Blino 'Maker' Boards Documentation</a>
       </nav>
 
       
@@ -127,8 +115,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Devices &raquo;</li>
+        
+      
     
-    <li>Electrodes</li>
+    <li>Tee-Naps</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -138,26 +130,9 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="electrodes-pi-naps_v02">Electrodes [ Pi-Naps_v0.2 ]</h1>
-<p>There are three options available for connecting electrodes to Pi-Naps. </p>
-<ul>
-<li>Solder Pads</li>
-<li>Dupont</li>
-<li>2.5mm Jack</li>
-</ul>
-<h3 id="solder">Solder</h3>
-<p>You may solder your wire directly to the solder pads exposed on the underside of the board. This will give you a fixed attachment. You should bear in mind the effects of fatigue when using this setup and design a case (or some other setup) that fixs the electrode cable and takes any potential strain.</p>
-<h3 id="dupont">Dupont</h3>
-<p>Pi-Naps can be ordered with pins fitted to the board, allowing for compatability with dupont connectors. This can be useful for home made electrode applications and low cost testing. </p>
-<p>The solder pads on the underside of Pi-Naps match the footprint for SMT type right angle 2.54mm headers. These can easily be added and removed at the users convenience. </p>
-<h3 id="25mm-jack">2.5mm jack</h3>
-<p><em>Our 2.5mm Jack electrodes are expected to arrive on our store within the next month</em> </p>
-<p>The recommended method for attaching electrodes to Pi-Naps is using 2.5mm jacks. This is not currently a standard connector for EEG electrodes and as such we have had electrodes made especially for this application. </p>
-<p>So far we have found the performance of jack connectors to be effective in terms of noise and the obvious connvience is a excellent benefit for many applications. </p>
-<p>Jacks make it easy to transport, minimise fatigue on the connector and allow for easy changes between different cables.</p>
-<h2 id="electrode-wiring-pi-naps_v02">Electrode Wiring [ Pi-Naps_v0.2 ]</h2>
-<p>Electrodes used with Pi-Naps (and Tee-Naps) are split into two wires typically. The Forehead electrode requires a single core cable which is shielded. The Ear Reference requires a two core cable, that is shielded. </p>
-<p>It is likely easiest to use twin core, shielded wire and only use one core for the forehead electrode. </p>
+                <h1 id="tee-naps">Tee-Naps</h1>
+<p>Tee-Naps is the simplified partner device to Pi-Naps, providing the same single channel EEG as Pi-Naps in a highly compact form factor. The shield is designed to work primarily with the Teensy 3.2 (with future support for Arduino) and is programmed in C using the Teensy version of Arduino IDE.</p>
+<p>Tee-Naps is available but is currently being produced to order only, currently. To find out more, get in touch.</p>
               
             </div>
           </div>
@@ -165,8 +140,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../pi-naps/" class="btn btn-neutral float-right" title="Pi-Naps">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../eeg/" class="btn btn-neutral" title="EEG"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../devices_pi/" class="btn btn-neutral" title="Pi-Naps_v0.2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -192,8 +169,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../eeg/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../devices_pi/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../pi-naps/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -1,0 +1,232 @@
+/*Box sizing (the nuclear option) */
+*, *:before, *:after {
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+/* Fix font rendering defaults */
+html, button {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, input,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+/* IE fixes for HTML5 elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+caption, th, td {
+text-align: left;
+font-weight: normal;
+vertical-align: middle;
+}
+
+strong, b, mark{
+  font-weight:bold;
+  font-style:inherit;
+}
+
+em, i, cite, q, address, dfn, var{
+  font-style:italic;
+  font-weight:inherit;
+}
+
+a, u, ins{
+  text-decoration:none;
+}
+
+pre, code, samp, kbd{
+  font-family:monospace;
+}
+
+iframe {
+width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* customised styles */
+
+body {
+
+  background-color: black;
+  color: white;
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 15px;
+  font-family: 'Lato', sans-serif;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  color: cyan;
+  font-size: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding: 0;
+}
+
+li {
+  padding-bottom: 2rem;
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  border-bottom: solid 1px rgba(125,125,125);
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+}
+
+img {
+  max-width: 50%;
+  display: block;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 6em);
+  word-wrap:break-word;
+  padding-top: 10vh;
+  gap:10px;
+}
+
+.section {
+  font-size: 1.5rem;
+}
+
+nav a{
+  color: white;
+}
+
+/* Fancy button */
+
+button {
+  font-family: 'Lato', sans-serif;
+  font-size: large;
+}
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #fff, #00ffd5, #7a00ff, #00ffd5,#fff);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
