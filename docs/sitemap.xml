@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://docs.blino.io/</loc>
-     <lastmod>2021-10-15</lastmod>
+     <lastmod>2021-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.blino.io/devices_pi/</loc>
-     <lastmod>2021-10-15</lastmod>
+     <lastmod>2021-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.blino.io/devices_tee/</loc>
-     <lastmod>2021-10-15</lastmod>
+     <lastmod>2021-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.blino.io/pi-naps/</loc>
-     <lastmod>2021-10-15</lastmod>
+     <lastmod>2021-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.blino.io/tee-Naps/</loc>
-     <lastmod>2021-10-15</lastmod>
+     <lastmod>2021-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.blino.io/eeg/</loc>
-     <lastmod>2021-10-15</lastmod>
+     <lastmod>2021-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://docs.blino.io/electrodes/</loc>
-     <lastmod>2021-10-15</lastmod>
+     <lastmod>2021-10-17</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
