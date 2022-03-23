@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/blino.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+  <title> Blino </title>
+
+</head>
+
+<body>
+<header>
+    <a href="/"><img src="/BlinoLogo_Wht.svg" alt="Home" width="100"></a>
+</header>
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Batteries vs USB Power
+</h1>
+<p class="subtitle"><strong>2020-05-21</strong></p>
+  <div class="blog-container">
+    <p>When working with our current iterations of maker BCI [Tee-naps _v0.1, Pi-Naps_v0.2] it's likely that you wont have much luck running the device using USB power. 
+Unfortunately, USB power on these devices is very noisy and you may find that this heavily detriments the EEG signal you are measuring.</p>
+<p>These devices are designed to be used with a battery plugged directly into our board using the commonly used 2-pin JST-PH connector. </p>
+<p>This also may extend to the use of HDMI on the Raspberry Pi. These are limitations we will be continuing to explore solutions for. </p>
+<p>PLEASE NOTE : To use Teensy 3.2 with Tee-Naps, you will need to cut the VIN -&gt; VUSB connection on the PCB (as described in the Teensy documentation) for use with an external charger.</p>
+
+  </div>
+    
+    </div>
+  </section>
+</body>
+
+</html>

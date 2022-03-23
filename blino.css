@@ -140,11 +140,6 @@ code {
   font-family: 'Source Code Pro', monospace;
 }
 
-img {
-  max-width: 50%;
-  display: block;
-}
-
 .container {
   display: flex;
   justify-content: center;
@@ -154,6 +149,24 @@ img {
   word-wrap:break-word;
   padding-top: 10vh;
   gap:10px;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 6em);
+  word-wrap:break-word;
+  padding-top: 10vh;
+  padding: 10vh;
+  gap:10px;
+  text-align: center;
+}
+.logo-page img{
+  width: 70vw;
+  height: auto;
+  border: none;
 }
 
 .section {

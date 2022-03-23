@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/blino.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&family=Source+Code+Pro:wght@200&display=swap" rel="stylesheet">
+  <title> Blino </title>
+
+</head>
+
+<body>
+<header>
+    <a href="/"><img src="/BlinoLogo_Wht.svg" alt="Home" width="100"></a>
+</header>
+  <section class="section">
+    <div class="container">
+      
+<h1 class="title">
+  Working with teensy3.2 and Tee_Naps
+</h1>
+<p class="subtitle"><strong>2020-06-30</strong></p>
+  <div class="blog-container">
+    <p>As power management is a critical factor in ensuring low noise for EEG acquisition, the Tee-Naps shield takes power from a li-po battery and powers both the shield and the Teensy. </p>
+<p>In order for safe operation it is  critical  that the Teensy is correctly setup to work with the battery.</p>
+<p>In order to work correctly with our power management, the trace connecting the two pads (found on the bottom of the Teensy3.2) should be cut. Cut along the indicated arrow, ensuring that the trace is is cleanly separated. This may require a light sidewards/ twisting pressure or motion. Take appropriate care when working with sharp blades and electronics.</p>
+<p>This is common practice when working with the Teensy and is documented on the pin diagrams that come with Teensy 3.2. There are two solder pads on the bottom of the Teensy that are joined by a narrow trace. This needs to be cut, separating the VIN and VUSB. This is indicated in the instructions which can be seen in the following picture:</p>
+<p><img src="https://www.pjrc.com/teensy/teensy32_back_pinout.png" alt="teensy3.2 pinout trace cut" /></p>
+
+  </div>
+    
+    </div>
+  </section>
+</body>
+
+</html>

@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>bhttps://blino.io/</loc>
+        <loc>https://blino.io/</loc>
     </url>
     <url>
-        <loc>bhttps://blino.io/blog/</loc>
+        <loc>https://blino.io/about/</loc>
     </url>
     <url>
-        <loc>bhttps://blino.io/docs/</loc>
+        <loc>https://blino.io/blog/</loc>
+    </url>
+    <url>
+        <loc>https://blino.io/blog/batteries/</loc>
+        <lastmod>2020-05-21</lastmod>
+    </url>
+    <url>
+        <loc>https://blino.io/blog/bci-for-makers/</loc>
+        <lastmod>2018-11-26</lastmod>
+    </url>
+    <url>
+        <loc>https://blino.io/blog/electrodes/</loc>
+        <lastmod>2019-04-11</lastmod>
+    </url>
+    <url>
+        <loc>https://blino.io/blog/teensy32/</loc>
+        <lastmod>2020-06-30</lastmod>
+    </url>
+    <url>
+        <loc>https://blino.io/docs/</loc>
     </url>
 </urlset>

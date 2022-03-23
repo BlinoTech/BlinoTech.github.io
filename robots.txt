@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: bhttps://blino.io/sitemap.xml
+Sitemap: https://blino.io/sitemap.xml
